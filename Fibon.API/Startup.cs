@@ -1,4 +1,5 @@
 ﻿using Fibon.API.Framework;
+using Fibon.API.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -29,6 +30,7 @@ namespace Fibon.API
             // Add framework services.
             services.AddMvc();
             ConfigureRabbitMq(services);
+            services.AddSingleton<IRepository>(_ => new InMemoryRepository());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
