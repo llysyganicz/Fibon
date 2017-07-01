@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RawRabbit;
 
-namespace Fibon.API.Controllers
+namespace Fibon.Service.Controllers
 {
     [Route("[controller]")]
     public class FibonacciController : Controller
