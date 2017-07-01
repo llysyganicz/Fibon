@@ -2,7 +2,7 @@ FROM microsoft/dotnet:runtime
 
 WORKDIR /dotnetapp
 
-COPY ./Bin/Docker .
+COPY ./bin/Docker .
 
 ENV ASPNETCORE ENVIRONMENT docker
 
