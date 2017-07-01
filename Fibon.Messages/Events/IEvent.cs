@@ -7,8 +7,8 @@ namespace Fibon.Messages.Events
         
     }
 
-    public interface EventHandler<in T> where T : IEvent
+    public interface IEventHandler<in T> where T : IEvent
     {
-        Task HandleAsync(T event);
+        Task HandleAsync(T @event);
     }
 }

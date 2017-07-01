@@ -6,6 +6,13 @@ namespace Fibon.Service.Controllers
     [Route("[controller]")]
     public class FibonacciController : Controller
     {
+        private readonly IBusClient _busClient;
+        
+        public FibonacciController(IBusClient busClient)
+        {
+            _busClient = busClient;
+        }
+        
         [HttpGet("{number}")]
         public IActionResult Get(int number)
         {

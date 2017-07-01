@@ -10,9 +10,10 @@
             
         }
 
-        public ValueCalculatedEvent(int number)
+        public ValueCalculatedEvent(int number, int value)
         {
             Number = number;
+            Value = value;
         }
     }
 }
